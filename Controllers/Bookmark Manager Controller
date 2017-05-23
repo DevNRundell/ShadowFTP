@@ -1,7 +1,6 @@
 package controller;
 
 /*
- * Developer: Nicholas Rundell
  * 
  * Class handles operations for the Bookmark Manager
  * 
