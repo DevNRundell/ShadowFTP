@@ -1,7 +1,6 @@
 package server;
 
 /*
- * Developer: Nicholas Rundell
  * 
  * Class is a model for the server table
  * Allows access to data within each cell in a row
