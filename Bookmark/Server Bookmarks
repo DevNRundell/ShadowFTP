@@ -1,7 +1,6 @@
 package bookmark;
 
 /*
- * Developer: Nicholas Rundell
  * 
  * Interacts with the users home drive
  * Creates a new folder named ShadowFTP_Bookmarks if necessary
