@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="mainContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="650.0" styleClass="content" stylesheets="css/LightTheme.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookmarkController">
+     <TextField fx:id="hostAddressTF" layoutX="13.0" layoutY="60.0" prefHeight="30.0" prefWidth="289.0" promptText="Host Address">
+         <font>
+             <Font size="14.0" />
+         </font>
+     </TextField>
+     <TextField fx:id="userTF" layoutX="13.0" layoutY="113.0" prefHeight="30.0" prefWidth="289.0" promptText="Username">
+         <font>
+             <Font size="14.0" />
+         </font>
+     </TextField>
+     <PasswordField fx:id="passwordField" layoutX="344.0" layoutY="113.0" prefHeight="30.0" prefWidth="289.0" promptText="Password">
+         <font>
+             <Font size="14.0" />
+         </font>
+     </PasswordField>
+     <TextField fx:id="bookmarkNameTF" layoutX="13.0" layoutY="165.0" prefHeight="30.0" prefWidth="289.0" promptText="Bookmark Name">
+         <font>
+             <Font size="14.0" />
+         </font>
+     </TextField>
+     <TextField fx:id="portTF" layoutX="344.0" layoutY="165.0" prefHeight="30.0" prefWidth="289.0" promptText="Port">
+         <font>
+             <Font size="14.0" />
+         </font>
+     </TextField>
+     <Button fx:id="addButton" layoutX="13.0" layoutY="561.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="81.0" text="Add" textFill="WHITE">
+         <font>
+             <Font size="18.0" />
+         </font>
+     </Button>
+     <Button fx:id="editButton" layoutX="109.0" layoutY="561.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="141.0" text="Edit Selected" textFill="WHITE">
+         <font>
+             <Font size="18.0" />
+         </font>
+     </Button>
+     <Button fx:id="deleteButton" layoutX="264.0" layoutY="561.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="157.0" text="Delete Selected" textFill="WHITE">
+         <font>
+             <Font size="18.0" />
+         </font>
+     </Button>
+     <Button fx:id="closeButton" layoutX="548.0" layoutY="561.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="89.0" text="Close" textFill="WHITE">
+         <font>
+             <Font size="18.0" />
+         </font>
+     </Button>
+     <Button fx:id="saveChangesButton" layoutX="489.0" layoutY="218.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="148.0" text="Save Changes" textFill="WHITE" visible="false">
+         <font>
+             <Font size="18.0" />
+         </font>
+     </Button>
+     <Button fx:id="cancelButton" layoutX="394.0" layoutY="218.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="81.0" text="Cancel" textFill="WHITE" visible="false">
+         <font>
+             <Font size="18.0" />
+         </font>
+     </Button>
+     <Label layoutX="13.0" layoutY="14.0" text="Bookmark Manager">
+         <font>
+             <Font size="24.0" />
+         </font>
+     </Label>
+     <ListView fx:id="savedBookmarksList" layoutX="13.0" layoutY="259.0" prefHeight="287.0" prefWidth="624.0" />
+     <Label layoutX="13.0" layoutY="221.0" text="Saved Bookmarks">
+         <font>
+             <Font size="18.0" />
+         </font>
+     </Label>
+</Pane>
