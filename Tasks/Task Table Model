@@ -3,7 +3,6 @@ package task;
 import javafx.scene.control.Button;
 
 /*
- * Developer: Nicholas Rundell
  * 
  * Class is a model for the task table.
  * Displays file information and download or upload progress.
