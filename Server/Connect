@@ -1,7 +1,6 @@
 package server;
 
 /*
- * Developer: Nicholas Rundell
  * 
  * Class creates a new instance of FTPClient which is the API for FTP connection
  * Handles login, connection, disconnect, and returns the connection instance.
