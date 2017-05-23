@@ -3,7 +3,6 @@ package task;
 import javafx.scene.control.Button;
 
 /*
- * Developer: Nicholas Rundell
  * 
  * Links the desired table with the model for the task table to access cell data
  * 
