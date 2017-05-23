@@ -1,7 +1,6 @@
 package user;
 
 /*
- * Developer: Nicholas Rundell
  * 
  * Class handles loading root directories
  * For each root, all the sub directories are loaded.
