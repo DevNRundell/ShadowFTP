@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1103.0" prefWidth="1600.0" styleClass="content" stylesheets="css/LightTheme.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainViewController">
+   <children>
+      <Label layoutX="88.0" layoutY="97.0" text="User's File System" />
+      <Label layoutX="85.0" layoutY="469.0" text="Ftp Server File System" />
+      <Label layoutX="89.0" layoutY="845.0" text="Task Manager" />
+      <Label layoutX="1072.0" layoutY="845.0" text="Log" />
+      <Label layoutX="1068.0" layoutY="96.0" text="Upload List" />
+      <Label layoutX="1068.0" layoutY="468.0" text="Download List" />
+      <SplitPane dividerPositions="0.5" layoutX="87.0" layoutY="126.0" prefHeight="310.0" prefWidth="933.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="210.0" prefWidth="100.0" styleClass="tree-view">
+               <children>
+                  <TreeView fx:id="userDirectoryTreeView" prefHeight="308.0" prefWidth="933.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="210.0" prefWidth="199.0" styleClass="tree-view">
+               <children>
+                  <TableView fx:id="userFileTable" prefHeight="308.0" prefWidth="923.0">
+                     <columns>
+                        <TableColumn fx:id="userFileNameCol" prefWidth="230.0" text="File Name" />
+                        <TableColumn fx:id="userFileSizeCol" prefWidth="187.0" text="File Size (KB)" />
+                        <TableColumn fx:id="userFileTypeCol" prefWidth="134.0" text="File Type" />
+                        <TableColumn fx:id="userFileLocCol" prefWidth="371.0" text="File Location" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <SplitPane dividerPositions="0.5" layoutX="87.0" layoutY="498.0" prefHeight="310.0" prefWidth="933.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="210.0" prefWidth="100.0">
+               <children>
+                  <TreeView fx:id="serverDirectoryTreeView" layoutY="-1.0" prefHeight="310.0" prefWidth="933.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="210.0" prefWidth="199.0">
+               <children>
+                  <TableView fx:id="serverFileTable" prefHeight="308.0" prefWidth="923.0">
+                     <columns>
+                        <TableColumn fx:id="serverFileNameCol" prefWidth="222.0" text="File Name" />
+                        <TableColumn fx:id="serverFileSizeCol" prefWidth="183.0" text="File Size (KB)" />
+                        <TableColumn fx:id="serverFileTypeCol" prefWidth="142.0" text="File Type" />
+                        <TableColumn fx:id="serverFileLocCol" prefWidth="375.0" text="File Location" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <ProgressIndicator fx:id="progIndicatorUserDir" layoutX="219.0" layoutY="91.0" prefHeight="31.0" prefWidth="43.0" progress="0.0" visible="false" />
+      <ProgressIndicator fx:id="progIndicatorServerDir" layoutX="241.0" layoutY="463.0" prefHeight="31.0" prefWidth="43.0" progress="0.0" visible="false" />
+      <TableView fx:id="taskTable" layoutX="89.0" layoutY="873.0" prefHeight="216.0" prefWidth="933.0">
+        <columns>
+          <TableColumn fx:id="taskFileNameCol" prefWidth="239.0" text="File Name" />
+          <TableColumn fx:id="taskFileSizeCol" prefWidth="212.0" text="File Size (KB)" />
+            <TableColumn fx:id="taskActionsCol" prefWidth="228.0" text="Cancel Operation" />
+            <TableColumn fx:id="taskProgressCol" prefWidth="253.0" text="Progress" />
+        </columns>
+      </TableView>
+      <TableView fx:id="userUploadTable" layoutX="1068.0" layoutY="125.0" prefHeight="310.0" prefWidth="440.0">
+        <columns>
+          <TableColumn fx:id="uploadFileNameCol" prefWidth="137.0" text="File Name" />
+          <TableColumn fx:id="uploadFileLocCol" prefWidth="302.0" text="File Location" />
+        </columns>
+      </TableView>
+      <TableView fx:id="serverDownloadTable" layoutX="1068.0" layoutY="498.0" prefHeight="308.0" prefWidth="440.0">
+         <columns>
+            <TableColumn fx:id="downloadFileNameCol" prefWidth="137.0" text="File Name" />
+            <TableColumn fx:id="downloadFileLocCol" prefWidth="302.0" text="File Location" />
+         </columns>
+      </TableView>
+      <Pane layoutX="-2.0" prefHeight="71.0" prefWidth="1624.0" style="-fx-background-color: BLACK;">
+         <children>
+            <TextField fx:id="hostAddressTF" layoutX="34.0" layoutY="20.0" prefHeight="31.0" prefWidth="214.0" promptText="Host Address" styleClass="text-field" />
+            <TextField fx:id="usernameTF" layoutX="273.0" layoutY="20.0" prefHeight="31.0" prefWidth="200.0" promptText="Username" styleClass="text-field" />
+            <PasswordField fx:id="passwordTF" layoutX="498.0" layoutY="20.0" prefWidth="200.0" promptText="Password" />
+            <TextField fx:id="portTF" layoutX="719.0" layoutY="20.0" prefHeight="31.0" prefWidth="81.0" promptText="Port" styleClass="text-field" />
+            <MenuButton fx:id="connectButton" layoutX="825.0" layoutY="18.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="166.0" text="Connect" />
+            <ImageView fx:id="connectionImageView" fitHeight="40.0" fitWidth="36.0" layoutX="1570.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <TextArea fx:id="logTA" editable="false" layoutX="1072.0" layoutY="873.0" prefHeight="216.0" prefWidth="440.0" styleClass="tree-view" wrapText="true" />
+      <ButtonBar layoutX="820.0" layoutY="88.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #b4ccdb;">
+        <buttons>
+            <Button fx:id="uploadButton" mnemonicParsing="false" prefWidth="114.0" style="-fx-background-color: #b4ccdb;" text="Upload" />
+          <Button fx:id="uploadAddButton" mnemonicParsing="false" style="-fx-background-color: #b4ccdb;" text="Add" />
+        </buttons>
+      </ButtonBar>
+      <ButtonBar layoutX="820.0" layoutY="460.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #b4ccdb;">
+         <buttons>
+            <Button fx:id="downloadButton" mnemonicParsing="false" prefWidth="114.0" style="-fx-background-color: #b4ccdb;" text="Download" />
+            <Button fx:id="downloadAddButton" mnemonicParsing="false" style="-fx-background-color: #b4ccdb;" text="Add" />
+         </buttons>
+      </ButtonBar>
+      <ButtonBar layoutX="1242.0" layoutY="460.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #b4ccdb;">
+         <buttons>
+            <Button fx:id="downloadListButton" mnemonicParsing="false" prefWidth="114.0" style="-fx-background-color: #b4ccdb;" text="Download" />
+            <Button fx:id="downloadRemoveListButton" mnemonicParsing="false" style="-fx-background-color: #b4ccdb;" text="Remove" />
+            <Button fx:id="downloadClearListButton" layoutX="125.0" layoutY="13.0" mnemonicParsing="false" style="-fx-background-color: #b4ccdb;" text="Clear" />
+         </buttons>
+      </ButtonBar>
+      <ButtonBar layoutX="1242.0" layoutY="88.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #b4ccdb;">
+         <buttons>
+            <Button fx:id="uploadListButton" mnemonicParsing="false" prefWidth="114.0" style="-fx-background-color: #b4ccdb;" text="Upload" />
+            <Button fx:id="uploadRemoveListButton" mnemonicParsing="false" style="-fx-background-color: #b4ccdb;" text="Remove" />
+            <Button fx:id="uploadClearListButton" layoutX="125.0" layoutY="13.0" mnemonicParsing="false" style="-fx-background-color: #b4ccdb;" text="Clear" />
+         </buttons>
+      </ButtonBar>
+      <ButtonBar layoutX="936.0" layoutY="836.0" prefHeight="40.0" prefWidth="85.0" style="-fx-background-color: #b4ccdb;">
+         <buttons>
+            <Button fx:id="clearTaskTableButton" mnemonicParsing="false" style="-fx-background-color: #b4ccdb;" text="Clear" />
+         </buttons>
+      </ButtonBar>
+   </children>
+</Pane>
