@@ -1,7 +1,6 @@
 package user;
 
 /*
- * Developer: Nicholas Rundell
  * 
  * Handles uploading a single file to the FTP Server.
  * 
