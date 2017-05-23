@@ -1,0 +1,351 @@
+
+
+.root {
+
+    -fx-background-color: #606872;
+
+     /*default font */
+
+    -fx-font-family: 'Helvetica Neue';
+
+    -fx-font-size: 15.0px;
+
+}
+
+/*******************************************************************************
+
+ *                                                                             *
+
+ * Label                                                                       *
+
+ *                                                                             *
+
+ ******************************************************************************/
+
+
+
+.label {
+
+    -fx-text-fill: WHITE;
+
+}
+
+
+
+.label:disabled {
+
+    -fx-opacity: -fx-disabled-opacity;
+
+}
+
+
+
+.label:show-mnemonics > .mnemonic-underline {
+
+    -fx-stroke: -fx-text-base-color;
+
+} 
+
+
+
+.text {
+
+    -fx-effect:dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.2), 0.0, 0.0, 0.0, 1.0); 
+
+}
+
+/*******************************************************************************
+
+ *                                                                             *
+
+ * Button & ToggleButton                                                       *
+
+ *                                                                             *
+
+ ******************************************************************************/
+
+ 
+
+.toggle-button, .button {
+
+    -fx-background-color: #4d4f4f;
+
+    -fx-background-insets:  0.0;
+
+    -fx-background-radius: 2.0;
+
+    -fx-border-width: 0.0;
+
+    -fx-padding: 0.1em;
+
+    -fx-alignment: CENTER;
+	
+    -fx-pref-height: 34px;
+
+    -fx-font-size: 15px;
+
+}
+
+
+
+.toggle-button:focused,
+
+.button:focused,
+
+.button:default:focused {
+
+       -fx-background-color: #9a5871;
+
+       -fx-text-fill: #6d4068;
+
+}
+
+
+
+.toggle-button:focused:selected {
+
+       -fx-background-color: #9a5871;
+
+       -fx-text-fill: #6d4068;
+
+}
+
+.toggle-button:armed,
+
+.toggle-button:selected,
+
+.button:armed,
+
+
+/*******************************************************************************
+
+ *                                                                             *
+
+ * Menu Button                                                                 *
+
+ *                                                                             *
+
+ ******************************************************************************/
+
+ 
+
+.menu-button {
+
+    -fx-background-color: #4d4f4f;
+
+    -fx-background-insets:  0.0;
+
+    -fx-background-radius: 2.0;
+
+    -fx-border-width: 0.0;
+
+    -fx-padding: 0.1em;
+
+    -fx-text-fill: WHITE;
+
+    -fx-alignment: CENTER;
+
+    -fx-content-display: LEFT;
+
+}
+
+.menu-item:focused {
+
+    -fx-background-color: #c6717a;
+
+}
+
+.menu-item:focused .label{
+
+    -fx-text-fill: WHITE;
+
+}
+
+.menu-item .label {
+
+    -fx-text-fill: BLACK;
+
+    -fx-content-display: LEFT;
+
+}
+
+.context-menu {
+
+    -fx-background-color: #4d4f4f;
+
+    -fx-text-fill: BLACK;
+
+    -fx-content-display: LEFT;
+
+}
+
+/*******************************************************************************
+
+ *                                                                             *
+
+ * TextField & TextArea                                                        *
+
+ *                                                                             *
+
+ ******************************************************************************/
+
+
+
+.text-area , .text-field {
+
+    -fx-background-color: WHITE;
+
+    -fx-text-fill: BLACK;
+
+    -fx-background-insets:  0.0;
+
+    -fx-background-radius: 2.0;
+
+    -fx-border-width: 0.0;
+
+    -fx-prompt-text-fill: BLACK;
+
+    -fx-highlight-fill: rgb(94.0, 203.0, 234.0);
+
+}
+
+.text-area .content {
+
+    -fx-padding: 0.7em;
+
+    -fx-border-width: 0.0;
+
+}
+
+
+.text-area:focused, .text-field:focused {
+
+    -fx-text-fill: WHITE;
+
+    -fx-background-color: #4d4f4f;
+
+    -fx-background-insets: 0.0, 0.2em;
+
+    -fx-background-radius: 2.0;
+
+}
+
+/*******************************************************************************
+
+ *                                                                             *
+
+ * Table View                                                                  *
+
+ *                                                                             *
+
+ ******************************************************************************/
+
+.table-view {
+	-fx-background-color: #4d4f4f;
+	-fx-control-inner-background: #4d4f4f;
+}
+
+.table-view .column-header {	
+	-fx-background-color: #b4ccdb;	
+}
+
+.table-view .column-header .label {
+	-fx-background-color: #b4ccdb;
+	-fx-text-fill: BLACK;
+}
+
+.table-view .table-row-cell:focused {	
+   	-fx-background-color: #c6717a; 
+}
+
+.table-view .table-row-cell:focused .text {	
+   	-fx-text-fill: BLACK;
+}
+
+/*******************************************************************************
+
+ *                                                                             *
+
+ * TreeView                                                                    *
+
+ *                                                                             *
+
+ ******************************************************************************/
+
+.tree-view {
+	 -fx-background-color: #4d4f4f;
+	 -fx-control-inner-background: #4d4f4f;
+}
+
+.tree-view .tree-cell:focused {
+    -fx-background-color: #c6717a;
+    -fx-text-fill: WHITE;
+}
+
+.tree-view .tree-cell > * > .text {
+   -fx-text-fill: BLACK;
+}
+
+
+/*******************************************************************************
+
+ *                                                                             *
+
+ * Scroll Bar                                                                  *
+
+ *                                                                             *
+
+ ******************************************************************************/
+
+.scroll-bar:vertical > .track-background,
+
+.scroll-bar:horizontal > .track-background{
+
+    -fx-background-color: #4d4f4f;
+
+    -fx-background-insets: 0.0;
+
+}
+
+
+
+.scroll-bar:vertical > .thumb,
+
+.scroll-bar:horizontal > .thumb {
+
+    -fx-background-color: #b4ccdb;
+
+    -fx-background-insets: 0.0;
+
+    -fx-background-radius: 0.0;
+
+}
+
+
+.scroll-bar > .increment-button, 
+
+.scroll-bar > .decrement-button,
+
+.scroll-bar:hover > .increment-button, 
+
+.scroll-bar:hover > .decrement-button {
+
+    -fx-background-color: transparent;
+
+}
+
+
+.scroll-bar > .increment-button > .increment-arrow,
+
+.scroll-bar > .decrement-button > .decrement-arrow {
+
+    -fx-background-color: white;
+
+}
+
+
+.scroll-bar > .track-background{
+
+    -fx-background-color:transparent;
+
+}
