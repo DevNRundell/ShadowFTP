@@ -1,7 +1,6 @@
 package server;
 
 /*
- * Developer: Nicholas Rundell
  * 
  * Links the desired table with the model for the server table to access cell data
  * 
