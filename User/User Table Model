@@ -1,7 +1,6 @@
 package user;
 
 /*
- * Developer: Nicholas Rundell
  * 
  * Class is a model for the task table.
  * Allows access to data within each cell in a row
