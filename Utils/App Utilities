@@ -1,0 +1,13 @@
+package utils;
+
+import javafx.scene.control.TextField;
+
+public class Utilities {
+
+	public static void clearTextFields(TextField[] textFields) {
+		
+		for (TextField textField : textFields) {
+			textField.setText("");
+		}
+	}
+}
