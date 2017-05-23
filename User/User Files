@@ -1,7 +1,6 @@
 package user;
 
 /*
- * Developer: Nicholas Rundell
  * 
  * Class handles file searching within a directory
  * 
