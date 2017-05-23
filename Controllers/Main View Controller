@@ -1,7 +1,6 @@
 package controller;
 
 /*
- * Developer: Nicholas Rundell
  * 
  * Class handles all the actions the user can use to interact
  * with connecting to an FTP site, uploading and downloading
